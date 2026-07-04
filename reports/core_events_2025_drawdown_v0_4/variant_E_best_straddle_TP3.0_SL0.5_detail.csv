@@ -1,0 +1,21 @@
+event_name,event_type,event_time_utc,may_split,first_side_to_hit,long_exit_reason,short_exit_reason,long_mfe_pct,short_mfe_pct,long_mae_pct,short_mae_pct,combined_pnl_pct,event_pnl_pct_for_curve(=comb/2),ambiguous_bar
+CPI_Dec2024,CPI,2025-01-15 13:30:00,pre_may_2025,long,tp,sl,3.004868,0.024622,-0.024622,-0.560393,2.5,1.25,False
+FOMC_Press_Conference_Jan,FOMC_PRESS_CONFERENCE,2025-01-29 19:30:00,pre_may_2025,long,tp,sl,3.548243,0.456165,-0.456165,-0.899288,2.5,1.25,False
+CPI_Jan2025,CPI,2025-02-12 13:30:00,pre_may_2025,short,sl,sl,0.725385,0.000378,-2.339831,-0.585147,-1.0,-0.5,False
+CPI_Feb2025,CPI,2025-03-12 12:30:00,pre_may_2025,none,sl,sl,1.653303,0.227231,-0.715125,-0.797137,-1.0,-0.5,False
+FOMC_Press_Conference_Mar,FOMC_PRESS_CONFERENCE,2025-03-19 18:30:00,pre_may_2025,none,timeout,sl,1.372915,0.496008,-0.496008,-0.676824,0.261303,0.1307,False
+CPI_Mar2025,CPI,2025-04-10 12:30:00,pre_may_2025,none,sl,sl,1.735799,0.225648,-0.615062,-1.735799,-1.0,-0.5,False
+FOMC_Press_Conference_May,FOMC_PRESS_CONFERENCE,2025-05-07 18:30:00,post_may_2025,none,sl,sl,0.85221,0.161559,-0.53853,-0.647901,-1.0,-0.5,False
+CPI_Apr2025,CPI,2025-05-13 12:30:00,post_may_2025,none,timeout,sl,2.514717,0.350556,-0.350556,-1.154913,1.468874,0.7344,False
+CPI_May2025,CPI,2025-06-11 12:30:00,post_may_2025,none,timeout,sl,2.68186,0.246956,-0.246956,-1.165461,1.967036,0.9835,False
+FOMC_Press_Conference_Jun,FOMC_PRESS_CONFERENCE,2025-06-18 18:30:00,post_may_2025,none,sl,sl,0.867811,0.138271,-0.577603,-0.688541,-1.0,-0.5,False
+CPI_Jun2025,CPI,2025-07-15 12:30:00,post_may_2025,long,tp,sl,3.031891,0.163959,-0.334301,-0.59939,2.5,1.25,False
+FOMC_Press_Conference_Jul,FOMC_PRESS_CONFERENCE,2025-07-30 18:30:00,post_may_2025,short,sl,tp,0.200177,3.166047,-0.682492,-0.200177,2.5,1.25,False
+CPI_Jul2025,CPI,2025-08-12 12:30:00,post_may_2025,long,tp,sl,3.131805,0.090188,-0.090188,-0.740194,2.5,1.25,False
+Powell_Jackson_Hole,JACKSON_HOLE,2025-08-22 14:00:00,post_may_2025,long,sl,sl,0.235828,0.646843,-0.646843,-1.919386,-1.0,-0.5,False
+CPI_Aug2025,CPI,2025-09-11 12:30:00,post_may_2025,none,sl,sl,0.869784,0.07132,-2.607553,-0.6574,-1.0,-0.5,False
+FOMC_Press_Conference_Sep,FOMC_PRESS_CONFERENCE,2025-09-17 18:30:00,post_may_2025,none,sl,sl,0.534358,0.369424,-0.548214,-0.534358,-1.0,-0.5,False
+CPI_Sep2025_Delayed,CPI,2025-10-24 12:30:00,post_may_2025,none,sl,sl,2.143075,0.070523,-0.703196,-2.143075,-1.0,-0.5,False
+FOMC_Press_Conference_Oct,FOMC_PRESS_CONFERENCE,2025-10-29 18:30:00,post_may_2025,short,sl,tp,0.231007,3.017107,-2.524559,-0.231007,2.5,1.25,False
+FOMC_Press_Conference_Dec,FOMC_PRESS_CONFERENCE,2025-12-10 19:30:00,post_may_2025,none,sl,sl,0.401551,0.691871,-0.691871,-0.520452,-1.0,-0.5,False
+CPI_Nov2025_Delayed,CPI,2025-12-18 13:30:00,post_may_2025,long,tp,sl,3.031466,0.242047,-0.242047,-1.279391,2.5,1.25,False

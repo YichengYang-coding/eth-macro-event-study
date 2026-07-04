@@ -1,0 +1,17 @@
+event_name,strategy,direction,entry_price,exit_after_entry_min,exit_price,pnl_pct,pnl_pct_after_fees
+Powell_Testimony_House,strat4_momentum,long,2421.92,5,2429.24,0.30224,0.20224
+Powell_Testimony_House,strat4_momentum,long,2421.92,15,2432.62,0.441798,0.341798
+Powell_Testimony_House,strat4_momentum,long,2421.92,30,2432.52,0.437669,0.337669
+Powell_Testimony_House,strat4_momentum,long,2421.92,60,2432.0,0.416199,0.316199
+Jackson_Hole,strat4_momentum,long,4386.59,5,4451.5,1.479737,1.379737
+Jackson_Hole,strat4_momentum,long,4386.59,15,4616.5,5.241201,5.141201
+Jackson_Hole,strat4_momentum,long,4386.59,30,4592.39,4.691571,4.591571
+Jackson_Hole,strat4_momentum,long,4386.59,60,4631.52,5.583608,5.483608
+Economic_Outlook,strat4_momentum,short,4170.33,5,4165.98,0.104308,0.004308
+Economic_Outlook,strat4_momentum,short,4170.33,15,4184.54,-0.34074,-0.44074
+Economic_Outlook,strat4_momentum,short,4170.33,30,4179.56,-0.221325,-0.321325
+Economic_Outlook,strat4_momentum,short,4170.33,60,4157.59,0.305491,0.205491
+NABE,strat4_momentum,long,4143.05,5,4128.89,-0.341777,-0.441777
+NABE,strat4_momentum,long,4143.05,15,4127.6,-0.372914,-0.472914
+NABE,strat4_momentum,long,4143.05,30,4132.79,-0.247644,-0.347644
+NABE,strat4_momentum,long,4143.05,60,4121.31,-0.524734,-0.624734

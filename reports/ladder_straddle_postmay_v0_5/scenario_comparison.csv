@@ -1,0 +1,3 @@
+scenario,n,cumulative_return_pct,max_drawdown_pct,mean_pct,median_pct,win_rate,best_event,best_value,worst_event,worst_value,cum_excl_largest_winner_pct,mean_excl_largest_winner_pct
+A_FOMC_press_conf,14,-1.1618,-1.225,-0.0829,-0.2,0.2143,Powell_Jackson_Hole,0.9132,CPI_Nov2025_Delayed,-0.3296,-2.0562,-0.1596
+B_FOMC_statement,14,-1.6619,-1.9576,-0.1187,-0.2,0.2857,Powell_Jackson_Hole,0.9132,FOMC_Dec,-1.2,-2.5518,-0.198

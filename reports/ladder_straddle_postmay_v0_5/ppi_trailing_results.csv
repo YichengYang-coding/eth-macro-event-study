@@ -1,0 +1,10 @@
+variant,universe,n,cum,maxdd,win,mean,best,bestv,worst,worstv,excl_winner_cum
+hard_wait_30m,all_PPI,10,-2.86,-2.887,0.1,-0.289,PPI_Jul2025,0.8,PPI_Apr2025,-0.755,-3.631
+hard_wait_30m,pre_may,4,-1.755,-1.755,0.0,-0.442,PPI_Jan2025,-0.2,PPI_Mar2025,-0.73,-1.558
+hard_wait_30m,post_may,6,-1.124,-1.152,0.167,-0.187,PPI_Jul2025,0.8,PPI_Apr2025,-0.755,-1.909
+trailing_1.0%,all_PPI,10,-2.69,-2.887,0.1,-0.271,PPI_Jul2025,0.976,PPI_Apr2025,-0.755,-3.631
+trailing_1.0%,pre_may,4,-1.755,-1.755,0.0,-0.442,PPI_Jan2025,-0.2,PPI_Mar2025,-0.73,-1.558
+trailing_1.0%,post_may,6,-0.951,-1.152,0.167,-0.158,PPI_Jul2025,0.976,PPI_Apr2025,-0.755,-1.909
+trailing_1.5%,all_PPI,10,-2.81,-2.887,0.1,-0.284,PPI_Jul2025,0.851,PPI_Apr2025,-0.755,-3.631
+trailing_1.5%,pre_may,4,-1.755,-1.755,0.0,-0.442,PPI_Jan2025,-0.2,PPI_Mar2025,-0.73,-1.558
+trailing_1.5%,post_may,6,-1.074,-1.152,0.167,-0.179,PPI_Jul2025,0.851,PPI_Apr2025,-0.755,-1.909

@@ -1,0 +1,9 @@
+wait_min,scenario,n,cumulative_return_pct,max_drawdown_pct,win_rate,mean_pct,best_event,best_value,worst_event,worst_value,cum_excl_largest_winner_pct
+3,press_conf,14,-1.1618,-1.225,0.2143,-0.0829,Powell_Jackson_Hole,0.9132,CPI_Nov2025_Delayed,-0.3296,-2.0562
+3,statement,14,-1.6619,-1.9576,0.2857,-0.1187,Powell_Jackson_Hole,0.9132,FOMC_Dec,-1.2,-2.5518
+10,press_conf,14,-0.5519,-1.2786,0.2857,-0.0384,Powell_Jackson_Hole,1.3,FOMC_Dec,-0.6082,-1.8281
+10,statement,14,-1.092,-2.0331,0.2857,-0.077,Powell_Jackson_Hole,1.3,FOMC_Dec,-1.2,-2.3613
+15,press_conf,14,-0.2462,-1.3596,0.4286,-0.0164,Powell_Jackson_Hole,1.3,FOMC_Dec,-0.7476,-1.5263
+15,statement,14,-0.8197,-1.8074,0.4286,-0.0572,Powell_Jackson_Hole,1.3,FOMC_Dec,-1.2,-2.0925
+30,press_conf,14,0.7844,-1.2417,0.4286,0.0572,Powell_Jackson_Hole,1.3,FOMC_Dec,-0.6272,-0.5089
+30,statement,14,-0.1378,-1.9423,0.3571,-0.0081,Powell_Jackson_Hole,1.3,FOMC_Dec,-1.2,-1.4193

@@ -1,0 +1,11 @@
+split,variant,n,mean_event_ret_pct,volatility_pct,sharpe_per_event,sharpe_annualized_approx
+full_year,A_pre_long_60,20,0.7823,2.2826,0.3427,1.5328
+full_year,B_pre_long_120,20,0.8885,2.4469,0.3631,1.6239
+full_year,C_momentum_60,20,0.9282,1.658,0.5599,2.5038
+full_year,D_straddle_TP1.5_SL1.0,20,0.144,0.2901,0.4965,2.2202
+full_year,E_best_straddle,20,0.2799,0.8396,0.3334,1.491
+post_may,A_pre_long_60,14,1.0102,2.361,0.4279,1.9987
+post_may,B_pre_long_120,14,1.1147,2.3987,0.4647,2.1707
+post_may,C_momentum_60,14,1.1026,1.5828,0.6966,3.2536
+post_may,D_straddle_TP1.5_SL1.0,14,0.125,0.3361,0.3719,1.7371
+post_may,E_best_straddle,14,0.3191,0.8613,0.3705,1.7308

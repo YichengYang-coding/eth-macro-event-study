@@ -1,0 +1,5 @@
+event_name,event_time_utc,pre_60_to_event_return,event_to_15_return,event_to_60_return,minus10_to_60_return,max_up_180_360,max_down_180_360,best_directional_strategy,best_straddle_setting
+Powell_Testimony_House,2025-06-24 14:00,0.3266,0.3123,0.3904,0.5104,2.5098,-0.9952,pre_long@+60m (+0.5104%),TP1.5/SL0.5
+Jackson_Hole,2025-08-22 14:00,1.0612,7.1162,7.5418,7.1518,13.2831,-1.9208,pre_long@+60m (+7.1518%),TP3.0/SL1.0
+Economic_Outlook,2025-09-23 16:35,-0.1386,-0.0045,-0.3875,-0.5163,0.7067,-1.0734,pre_short@+60m (+0.5163%),TP1.0/SL0.5
+NABE,2025-10-14 16:20,3.4363,0.3993,0.5971,1.4864,1.5546,-5.1077,pre_long@+60m (+1.4864%),TP2.0/SL0.5

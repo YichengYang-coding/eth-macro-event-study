@@ -1,0 +1,15 @@
+event_name,event_type,anchor_utc,entry_utc,long_leg_gross_pct,long_exit,short_leg_gross_pct,short_exit,portfolio_gross_pct,portfolio_net_pct,equity
+FOMC_May,FOMC_PRESS_CONFERENCE,2025-05-07 18:30,2025-05-07 18:29,0.5232,market_event+3,-0.5232,market_event+3,0.0,-0.2,0.998
+CPI_Apr2025,CPI,2025-05-13 12:30,2025-05-13 12:29,0.5825,market_event+3,-0.5825,market_event+3,0.0,-0.2,0.996004
+CPI_May2025,CPI,2025-06-11 12:30,2025-06-11 12:29,1.1301,market_event+3,-1.0,stop_-1%,0.065,-0.135,0.994659
+FOMC_Jun,FOMC_PRESS_CONFERENCE,2025-06-18 18:30,2025-06-18 18:29,0.6754,market_event+3,-0.6754,market_event+3,0.0,-0.2,0.99267
+CPI_Jun2025,CPI,2025-07-15 12:30,2025-07-15 12:29,0.8077,market_event+3,-1.0,stop_-1%,-0.0962,-0.2962,0.98973
+FOMC_Jul,FOMC_PRESS_CONFERENCE,2025-07-30 18:30,2025-07-30 18:29,-0.1797,market_event+3,0.1797,market_event+3,0.0,-0.2,0.98775
+CPI_Jul2025,CPI,2025-08-12 12:30,2025-08-12 12:29,1.451,market_event+3,-1.0,stop_-1%,0.2255,0.0255,0.988002
+Powell_Jackson_Hole,JACKSON_HOLE,2025-08-22 14:00,2025-08-22 13:59,3.2265,rest_market_@t_half+3,-1.0,stop_-1%,1.1132,0.9132,0.997025
+CPI_Aug2025,CPI,2025-09-11 12:30,2025-09-11 12:29,-1.0,stop_-1%,2.0,giveback_2%,0.5,0.3,1.000016
+FOMC_Sep,FOMC_PRESS_CONFERENCE,2025-09-17 18:30,2025-09-17 18:29,-0.5184,market_event+3,0.5184,market_event+3,0.0,-0.2,0.998016
+CPI_Sep2025_Delayed,CPI,2025-10-24 12:30,2025-10-24 12:29,0.9218,market_event+3,-1.0,stop_-1%,-0.0391,-0.2391,0.995629
+FOMC_Oct,FOMC_PRESS_CONFERENCE,2025-10-29 18:30,2025-10-29 18:29,0.2688,market_event+3,-0.2688,market_event+3,0.0,-0.2,0.993638
+FOMC_Dec,FOMC_PRESS_CONFERENCE,2025-12-10 19:30,2025-12-10 19:29,0.4287,market_event+3,-0.4287,market_event+3,0.0,-0.2,0.991651
+CPI_Nov2025_Delayed,CPI,2025-12-18 13:30,2025-12-18 13:29,0.7409,market_event+3,-1.0,stop_-1%,-0.1296,-0.3296,0.988382

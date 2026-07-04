@@ -1,0 +1,11 @@
+metric,avg_all_4,avg_excl_JH,JH_only
+pre_event_long_exit+15m,2.0782,0.5284,6.7277
+pre_event_long_exit+30m,2.0979,0.6893,6.3237
+pre_event_long_exit+60m,2.1581,0.4935,7.1518
+pre_event_long_exit+120m,2.2127,0.5497,7.2015
+momentum_entry+1m_exit+15m,1.2423,-0.0906,5.2412
+momentum_entry+1m_exit+30m,1.1651,-0.0104,4.6916
+momentum_entry+1m_exit+60m,1.4451,0.0657,5.5836
+straddle_TP1.0_SL1.0_afterfees,-0.2,-0.2,-0.2
+straddle_TP1.5_SL1.0_afterfees,0.0899,0.0199,0.3
+straddle_TP2.0_SL1.0_afterfees,0.1952,-0.0064,0.8

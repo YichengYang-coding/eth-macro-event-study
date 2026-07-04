@@ -1,0 +1,5 @@
+event_name,event_utc,event_anchor_price,max_up_180_360_pct,max_down_180_360_pct,max_1m_high_low_range,max_1m_range_time_utc,biggest_move_segment,biggest_move_segment_range
+Powell_Testimony_House,2025-06-24 14:00,2420.53,2.5098,-0.9952,30.14,2025-06-24 16:43,+180..+360,64.27
+Jackson_Hole,2025-08-22 14:00,4288.37,13.2831,-1.9208,99.24,2025-08-22 14:00,0..+15,337.28
+Economic_Outlook,2025-09-23 16:35,4180.19,0.7067,-1.0734,14.72,2025-09-23 14:34,+180..+360,52.41
+NABE,2025-10-14 16:20,4099.52,1.5546,-5.1077,65.0,2025-10-14 16:20,-60..0,204.46
