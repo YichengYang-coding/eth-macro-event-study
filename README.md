@@ -99,6 +99,14 @@ and **not universal alpha**. The post-May 2025 split was an ex-ante regime call;
 - This is research output, **not** a deployable strategy — capacity in a ±10-minute event
   window on 1m depth is tiny, and the out-of-sample evidence is precisely why the 2025
   numbers should not be extrapolated.
+  
+## Companion study
+
+The same falsification discipline applied to a pairs/relative-value hypothesis lives in a
+separate repo: [eth-sol-relative-value-study](https://github.com/YichengYang-coding/eth-sol-relative-value-study) —
+an 81%-win in-sample signal shown to be a disguised regime bet (negative in 2023/2024/2026,
+residual ≈0 under beta-hedging), plus evidence that rising market integration
+(ETH~SOL β 0.30 → 0.88) is structurally closing cross-coin divergence as a category.
 
 ## Reproducing
 
