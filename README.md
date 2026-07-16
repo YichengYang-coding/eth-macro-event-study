@@ -17,13 +17,19 @@ negative in every year 2023–2026. One-page summary:
 
 ## Motivation
 
-The original goal was a profitable **2025 news-driven straddle** on ETH: go market-neutral
-into scheduled releases and harvest the post-news move. Building it surfaced the key
-structural insight that reframed the project: a "straddle" replicated as a **symmetric
-long+short on a linear perpetual is net-zero by construction** — unlike an options straddle
-it has no long-volatility convexity; it only bleeds fees. So the question became an
-**event-reaction study**: which macro events move ETH in a *tradeable (asymmetric)* way, and
-is any apparent edge real — or just market beta / a single volatility regime?
+The starting hypothesis was about **order flow around scheduled macro releases**: before a major
+announcement the market is balanced and uncertain; once the number lands and price makes a
+decisive move, flow may turn one-sided — so the initial breakout should *continue* rather than
+immediately reverse. To test continuation directly I built a **path-dependent dual-leg TP/SL
+bracket** on ETH perpetuals: simultaneous long and short with independent exits, so the winning
+leg can run while the losing leg is cut. (A *static* symmetric long+short on a linear perp is
+net-zero by construction — the bracket's entire payoff comes from asymmetric, path-dependent
+exits, i.e. it is a pure bet on continuation.) The bracket showed encouraging 2025 results but
+**no stable edge**: PPI whipsawed both legs, and performance did not replicate out-of-sample.
+Rather than tuning it further, I used its failure pattern — clean one-sided breaks on CPI,
+whipsaws elsewhere — to ask a sharper question: is the reaction **directional**, not merely
+volatile? Isolating the long side produced the CPI pre-event long study, and ultimately the
+regime-conditional conclusion.
 
 ## Data & discipline
 
