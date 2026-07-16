@@ -5,16 +5,19 @@
 leakage-controlled backtest framework.
 
 ## Motivation
-My original goal was to build a profitable **2025 news-driven (macro-event) straddle** on ETH
-for a trading-firm application — go market-neutral into scheduled releases and harvest the
-post-news move. Building it surfaced a key insight: a "straddle" replicated with a **symmetric
-long+short position on a *linear* perpetual is net-zero by construction** (the two legs cancel
-their own P&L and the position only bleeds fees) — unlike an *options* straddle, it has no long-
-volatility convexity. That realization reframed the project: rather than force a winning
-symmetric straddle, I turned it into a disciplined **event-reaction study** — which macro events
-move ETH in a *tradeable* (asymmetric) way, and whether any edge is real or just market beta /
-a single volatility regime. The asymmetric variants (ladder TP/SL, directional, momentum) were
-my attempt to turn that net-zero structure into something with an actual payoff.
+The starting hypothesis was about **order flow around scheduled macro releases**: before a major
+announcement the market is balanced and uncertain; once the number lands and price makes a
+decisive move, flow may turn one-sided — so the initial breakout should *continue* rather than
+immediately reverse. To test continuation directly I built a **path-dependent dual-leg TP/SL
+bracket** on ETH perpetuals: simultaneous long and short with independent exits, so the winning
+leg can run while the losing leg is cut. (A *static* symmetric long+short on a linear perp is
+net-zero by construction — the bracket's entire payoff comes from asymmetric, path-dependent
+exits, i.e. it is a pure bet on continuation.) The bracket showed encouraging 2025 results but
+**no stable edge**: PPI whipsawed both legs, and performance did not replicate out-of-sample.
+Rather than tuning the bracket further, I used its failure pattern — clean one-sided breaks on
+CPI, whipsaws elsewhere — to ask a sharper question: is the reaction **directional**, not merely
+volatile? Isolating the long side produced the CPI pre-event long study below, and ultimately
+the regime-conditional conclusion.
 
 ## Framework & data discipline
 - Canonical UTC timestamp (`open_time_utc`); mandatory **Step-1 verification before every run**:
@@ -70,10 +73,10 @@ in-sample curve-fitting.
 a higher-volatility / higher-participation phase), **not** a PnL-optimized cut. The 2023–24 and
 2026 out-of-sample windows were run to *test* that call; the result (effect is regime-dependent,
 not universal) is reported as-is.
-- **"You said a symmetric straddle is net-zero, yet the bracket is 11/11 positive — contradiction?"**
+- **"If a symmetric long+short is net-zero, why build a dual-leg bracket at all — and where does 11/11 come from?"**
 — No: the static symmetric long+short has **no convexity** and is net-zero by construction. The
 positive result comes from **path-dependent TP/SL execution** (asymmetric exits), not from holding
-a true static straddle. (Renamed accordingly: *path-dependent TP/SL bracket*, not "straddle.")
+a true static straddle. The bracket is deliberately *not* a static straddle — it is the direct test of the continuation hypothesis.
 - **"Isn't the short-side result just crypto risk-on / long-run beta?"** — This **does not claim a
 stable standalone alpha**. It shows CPI reaction days carry a **directional asymmetry** relative to
 (a) random non-event 60-min holds and (b) same-day short controls — a *characterization of event
