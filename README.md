@@ -87,12 +87,12 @@ reports/
 
 ## Final conclusion
 
-ETH's tradeable CPI reaction is **regime-conditional**: its magnitude tracks the prevailing
-volatility regime monotonically (2023–24 ≈ 0 → 2026 weak → 2025 strong) and holds across
-exit horizons, while the short side is negative in every year — i.e. CPI drives a
-*directionally upward-biased reaction whose size depends on the regime*, not two-sided noise
-and **not universal alpha**. The post-May 2025 split was an ex-ante regime call; the
-2023–2024 and 2026 windows were run to *test* that call, and the result is reported as-is.
+ETH's tradeable CPI reaction is **regime-conditional**: its magnitude tracks the prevailing volatility regime monotonically (2023–24 ≈ 0 → 2026 weak → 2025 strong) and holds across
+exit horizons, while the short side is negative in every year — i.e. CPI drives a *directionally upward-biased reaction whose size depends on the regime*, not two-sided noise
+and **not universal alpha**. The post-May split was an ex-ante regime call, made on observables available at the time: 2025 ETH turnover and open interest were running well above 2023–24 levels 
+(avg daily turnover ~$15B vs ~$5–9B; OI roughly 3× the 2024 base) alongside higher realized volatility — i.e. a higher-participation, higher-volatility phase — not a PnL-optimized cut. 
+The 2023–24 and 2026 windows were run precisely to test that call. (Quantifying it afterwards: the volatility leg gets directional support — the strongest year had the highest ex-ante realized vol 
+— while the OI leg is falsified by 2024, whose OI regime was the highest of all four years with zero edge. The regime characterization is therefore reported as coarse, not as a precise conditioning variable.)
 
 ## Honest limitations
 
