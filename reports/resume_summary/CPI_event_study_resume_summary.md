@@ -5,19 +5,16 @@
 leakage-controlled backtest framework.
 
 ## Motivation
-The starting hypothesis was about **order flow around scheduled macro releases**: before a major
-announcement the market is balanced and uncertain; once the number lands and price makes a
-decisive move, flow may turn one-sided — so the initial breakout should *continue* rather than
-immediately reverse. To test continuation directly I built a **path-dependent dual-leg TP/SL
-bracket** on ETH perpetuals: simultaneous long and short with independent exits, so the winning
-leg can run while the losing leg is cut. (A *static* symmetric long+short on a linear perp is
-net-zero by construction — the bracket's entire payoff comes from asymmetric, path-dependent
-exits, i.e. it is a pure bet on continuation.) The bracket showed encouraging 2025 results but
-**no stable edge**: PPI whipsawed both legs, and performance did not replicate out-of-sample.
-Rather than tuning the bracket further, I used its failure pattern — clean one-sided breaks on
-CPI, whipsaws elsewhere — to ask a sharper question: is the reaction **directional**, not merely
-volatile? Isolating the long side produced the CPI pre-event long study below, and ultimately
-the regime-conditional conclusion.
+**Started as a trade idea, ended as a falsification.** Watching ETH around a Powell speech — open
+interest spiking, market hot — the idea was to open **both directions at once**: stop out the
+losing leg, ride the winner's momentum (a path-dependent dual-leg TP/SL bracket; a static
+long+short nets to zero, so the payoff is purely a bet that the move runs past stops and fees).
+**It died on the data:** on 2025 Powell + NFP events, post-event moves on average faded before
+covering stops and fees (best bracket −0.29%/event after 4-leg fees, n=15; only Jackson Hole moved
+enough). Not enough momentum. That made the real question obvious — **are there events where the
+move IS big enough, and asymmetric?** — so it became an event-reaction study: screen all release
+types on one footing, then test whether the surviving reaction (CPI) is directional, not merely
+volatile, and whether it holds out-of-sample.
 
 ## Framework & data discipline
 - Canonical UTC timestamp (`open_time_utc`); mandatory **Step-1 verification before every run**:
@@ -74,9 +71,10 @@ a higher-volatility / higher-participation phase), **not** a PnL-optimized cut. 
 2026 out-of-sample windows were run to *test* that call; the result (effect is regime-dependent,
 not universal) is reported as-is.
 - **"If a symmetric long+short is net-zero, why build a dual-leg bracket at all — and where does 11/11 come from?"**
-— No: the static symmetric long+short has **no convexity** and is net-zero by construction. The
-positive result comes from **path-dependent TP/SL execution** (asymmetric exits), not from holding
-a true static straddle. The bracket is deliberately *not* a static straddle — it is the direct test of the continuation hypothesis.
+— Because it *was* the original trade idea: open both sides, cut the loser, ride the winner. A static
+long+short has **no convexity** and is net-zero; the bracket's payoff comes only from **path-dependent
+TP/SL exits**, i.e. it is a direct bet on post-event continuation. That bet failed on Powell/NFP; the
+11/11 is CPI 2025 only, and it falls to 15/24 out-of-sample (2023–24).
 - **"Isn't the short-side result just crypto risk-on / long-run beta?"** — This **does not claim a
 stable standalone alpha**. It shows CPI reaction days carry a **directional asymmetry** relative to
 (a) random non-event 60-min holds and (b) same-day short controls — a *characterization of event
