@@ -15,21 +15,31 @@ negative in every year 2023–2026. One-page summary:
 
 ---
 
-## Motivation
+## Motivation: from a trade idea to a falsification
 
-The starting hypothesis was about **order flow around scheduled macro releases**: before a major
-announcement the market is balanced and uncertain; once the number lands and price makes a
-decisive move, flow may turn one-sided — so the initial breakout should *continue* rather than
-immediately reverse. To test continuation directly I built a **path-dependent dual-leg TP/SL
-bracket** on ETH perpetuals: simultaneous long and short with independent exits, so the winning
-leg can run while the losing leg is cut. (A *static* symmetric long+short on a linear perp is
-net-zero by construction — the bracket's entire payoff comes from asymmetric, path-dependent
-exits, i.e. it is a pure bet on continuation.) The bracket showed encouraging 2025 results but
-**no stable edge**: PPI whipsawed both legs, and performance did not replicate out-of-sample.
-Rather than tuning it further, I used its failure pattern — clean one-sided breaks on CPI,
-whipsaws elsewhere — to ask a sharper question: is the reaction **directional**, not merely
-volatile? Isolating the long side produced the CPI pre-event long study, and ultimately the
-regime-conditional conclusion.
+This started as a trade idea and ended as a falsification.
+
+**The trade idea.** Watching ETH perpetuals around a Powell speech — open interest spiking, the
+market visibly hot — I wanted to open **both directions at once** at the event: stop out the
+losing leg quickly and ride the winning leg's momentum. Implemented as a dual-leg TP/SL bracket
+(simultaneous long and short with independent exits). A *static* long+short on a linear perp
+nets to zero, so the whole payoff comes from the path-dependent exits — the trade only works if
+the post-event move runs far enough past the stop to pay for the stopped-out leg and four legs
+of fees.
+
+**It died on the data.** On the first samples (v0.1–v0.2, 2025 Powell events + NFP), post-event
+moves on average **faded before they covered stops and fees**: the most robust bracket
+(TP 1.5% / SL 1.0%) averaged **−0.29% per event after fees** across 15 Powell/NFP events
+(NFP −0.43%; Powell +0.02% once Jackson Hole is excluded), and +1m momentum entries were ≈0 or
+negative after fees. Only Jackson Hole — a single event — moved enough. Not enough momentum.
+
+**The real question.** That failure made the actual question obvious: *are there scheduled events
+where the move IS big enough — and asymmetric?* So the project became an **event-reaction
+study**: screen every major release type on the same footing (v0.3a), separate clean one-sided
+breaks from whipsaws, then test whether the reaction is **directional**, not merely large. CPI
+was the only candidate that survived screening (every 2025 CPI broke ≥1.5%; PPI whipsawed both
+legs), which led to the CPI pre-event long study — and finally to the multi-year out-of-sample
+test showing the CPI edge is regime-conditional, not structural.
 
 ## Data & discipline
 
@@ -78,7 +88,7 @@ reports/
 
 | Stage | Question | Result |
 |---|---|---|
-| v0.1–v0.2 (Powell, NFP) | Do Fed speeches / NFP move ETH tradeably? | Only **Jackson Hole**; ordinary speeches nothing; NFP moves too small to clear fees. |
+| v0.1–v0.2 (Powell, NFP) | Does the two-sided trade work? Do Fed speeches / NFP move ETH tradeably? | **No** — moves fade before covering stops + fees (bracket −0.29%/event after fees, n=15). Only **Jackson Hole** moved enough; ordinary speeches nothing; NFP too small. |
 | v0.3a (CPI vs PPI) | Same footing comparison | **CPI reacts cleanly** (11/11 events broke ≥1.5%, no whipsaw); **PPI whipsaws** (3 double-stops). CPI becomes the focus. |
 | v0.4 (20-event portfolio) | Portfolio behavior, pre- vs post-May 2025 | Full-year +16.3% unscaled / −4.55% maxDD; post-May ≫ pre-May (pre-May turns negative ex-largest-winner); **CPI dominates, FOMC pre-long detracts**. |
 | v0.4b (FOMC anchors) | Statement vs press conference | Opposite signals: statement → fade works; press conf → momentum works (n=8, exploratory). |
